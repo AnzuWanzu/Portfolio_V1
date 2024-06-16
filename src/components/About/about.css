@@ -1,0 +1,100 @@
+#about {
+  font-family: Urbanist;
+  display: flex;
+  align-items: center;
+  background: #232E43;
+  flex-direction: column;
+  padding: 2rem 2rem 5rem;
+  text-align: center;
+}
+
+#about h2 {
+  letter-spacing: 0.06rem;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  max-width: 55rem;
+}
+
+#about .image-container {
+  width: 60%; 
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; 
+}
+
+.about-image {
+  max-width: 40%; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#about p {
+  font-size: 20px;
+  color: white;
+  letter-spacing: 0.06rem;
+  line-height: 1.5;
+  max-width: 65rem;
+}
+
+@media (min-width: 1200px) {
+  .about-image {
+    max-width: 30%; 
+  }
+}
+
+@media (max-width: 1200px) {
+  #about {
+    padding: 1rem; 
+  }
+  #about p {
+    font-size: 1.2rem;
+    max-width: 50rem;
+    margin-bottom: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding: 1rem; 
+  }
+
+  #about h2 {
+    margin-top: 1rem;
+    font-size: 2rem; 
+    max-width: 100%;
+    margin-bottom: 1rem; 
+  }
+
+  #about p {
+    font-size: 18px; 
+    max-width: 90%;
+    margin-bottom: 0.5rem; 
+  }
+
+  #about .image-container {
+    width: 80%; 
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+    padding: 0.5rem; 
+  }
+
+  #about h2 {
+    font-size: 1.8rem; 
+  }
+
+  #about p {
+    font-size: 12px; 
+    margin-left: 0.5rem; 
+    margin-right: 0.5rem; 
+    margin-bottom: 2rem; 
+  }
+
+  #about .image-container {
+    width: 90%;
+  }
+}

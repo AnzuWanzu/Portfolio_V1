@@ -1,0 +1,84 @@
+#education {
+  background: #232E43;
+  height: auto;
+  font-family: 'Urbanist';
+  padding: 1rem 2rem 1rem;
+}
+
+#education h2 {
+  letter-spacing: 0.05rem;
+  font-size: 40px;
+  margin: 0; 
+  padding: 1rem 0 1rem 0; 
+  color: white;
+  background: #232E43;
+}
+
+#education h3 {
+  padding-top: 0.25em;
+}
+
+#education .vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+              0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  padding: 2em 4em !important;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#education .date {
+  color: rgb(132, 183, 199);
+  letter-spacing: 0.05rem;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#description {
+  margin: 1.2em 0 0 0;
+  letter-spacing: 0.05rem;
+  font-size: 16px;
+  color:#12213f;
+}
+
+#education .vertical-timeline-element-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#education .vertical-timeline-element-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#12213f;
+}
+
+#education .vertical-timeline-element:last-child .vertical-timeline-element-content {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #education h2 {
+    font-size: 1.8rem; 
+    padding: 1rem 0 0.5rem 0; 
+    margin-bottom: 1rem;
+  }
+
+  #education .vertical-timeline-element-content {
+    padding: 1em 1em !important; 
+    font-size: 16px; 
+  }
+
+  #education .date {
+    font-size: 14px; 
+  }
+
+  #description {
+    margin: 0.8em 0 0 0; 
+    font-size: 12px; 
+  }
+}

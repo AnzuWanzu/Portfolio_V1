@@ -1,0 +1,75 @@
+#certificates {
+  font-family: 'Urbanist', sans-serif;
+  height: auto;
+  padding: 1rem 2rem 1rem;
+  background: #232E43;
+  text-align: center;
+  color: white;
+}
+
+#certificates h2 {
+  letter-spacing: 0.05rem;
+  font-size: 40px;
+  margin: 0; 
+  padding: 1rem 0; 
+  background: #232E43;
+}
+
+.certificates_container {
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.certificate_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.certificate_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 8px; 
+  margin-bottom: 3rem;
+}
+
+.certificate_content {
+  padding: 10px;
+  text-align: center;
+}
+
+.swiper-pagination {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 10px; 
+  width: 100%; 
+}
+
+.swiper-pagination-bullet {
+  width: 3rem; 
+  height: 3rem;
+  background-color: #fff; 
+  opacity: 0.6; 
+  margin: 0 8px; 
+  border-radius: 50%; 
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1; 
+}
+
+@media only screen and (max-width: 768px) {
+  #certificates h2 {
+    font-size: 1.8rem; 
+    padding: 1rem 0 0.5rem; 
+    margin-bottom: 1rem; 
+  }
+}

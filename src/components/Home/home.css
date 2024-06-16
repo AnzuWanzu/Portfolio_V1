@@ -1,0 +1,238 @@
+@import url('../../assets/fonts/fonts.css');
+
+#home {
+    min-height: 90vh; /* Ensure content spans entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121824;
+    text-align: center; /* Center align text */
+    flex-direction: column;
+    padding: 8rem 2rem 1rem; /* Adjusted padding */
+    position: relative; /* Ensure relative positioning for absolute child */
+}
+
+#home h1 {
+  font-size: 5vw; /* Adjust font size */
+    margin-bottom: 1rem;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    text-align: center; /* Center align for smaller screens */
+}
+
+.highlight {
+    color: #81A5EB;
+}
+
+#home p {
+  font-size: 1.2rem;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 0.05rem;
+    line-height: 1.5;
+    max-width: 60rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#home h4 {
+    font-size: 18px;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 0.05rem;
+    line-height: 1.2;
+    max-width: 55rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.home-header h1 {
+    margin-right: 1rem;
+}
+
+.circular-image {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.home-icons {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 40px;
+    margin: 0 30px; /* Add horizontal spacing between icons */
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon:last-child {
+    margin-right: 0; /* Remove margin from last icon */
+}
+
+#home .icon {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+#home .icon:hover {
+    color: #81A5EB;
+    transform: scale(1.1);
+    animation: wiggle 0.5s ease-in-out forwards;
+}
+
+.animation-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+  width: 100%;
+  max-width: 550px;
+}
+
+@media (max-width: 768px) {
+  .animation-container {
+      max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .animation-container {
+      max-width: 100%;
+  }
+}
+
+
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    #home {
+        padding-top: 10rem;
+        padding-left: 3rem;
+    }
+
+    #home h1 {
+        font-size: 6rem;
+    }
+
+    #home h4 {
+        font-size: 1.2rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+        max-width: 45rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+        margin: 0 1rem;
+    }
+    .animation-container {
+      max-width: 90%; 
+  }
+}
+
+@media (max-width: 768px) {
+    #home {
+        padding: 6rem 2rem 1rem;
+    }
+
+    #home h1 {
+        font-size: 4rem;
+    }
+
+    #home h4 {
+        font-size: 1.2rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .icon {
+        font-size: 1.8rem;
+        margin: 0 0.8rem;
+    }
+
+    .animation-container {
+        max-width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        padding: 6rem 3rem 2rem;
+    }
+
+    #home h1 {
+        font-size: 3.5rem;
+    }
+
+    #home h4 {
+        font-size: 1rem;
+    }
+
+    #home p {
+      font-size: 14px; 
+        max-width: 100%;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .animation-container {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 1024px) {
+  #home {
+      padding: 10vh 10vw 1rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+      padding: 6rem 2rem 1rem; 
+  }
+
+  #home h1 {
+      font-size: 4rem; 
+  }
+
+  #home p {
+      font-size: 1rem; 
+      max-width: 100%; 
+}
+}
