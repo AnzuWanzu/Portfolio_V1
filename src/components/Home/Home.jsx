@@ -9,7 +9,6 @@ import {
 import "./home.css";
 import { CSSTransition } from "react-transition-group";
 import "@dotlottie/player-component/dist/dotlottie-player.mjs"; // Ensure correct path
-import TextType from "../../assets/styles/TextType";
 
 const Home = () => {
   const nodeRef = useRef(null);
