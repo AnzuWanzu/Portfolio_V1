@@ -50,7 +50,7 @@ const AnimatedButton = () => {
       </button>
       <a
         ref={linkRef}
-        href="/Resume-Samson2025 (HTML).pdf"
+        href="/Samson-FAANG Resume.pdf"
         download
         style={{ display: "none" }}
       >
