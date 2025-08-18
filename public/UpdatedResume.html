@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mary Angeline Samson - Resume</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Urbanist", sans-serif;
+        text-align: justify;
+        line-height: 1.6;
+        color: #16294b;
+        background: #121824;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .resume-container {
+        max-width: 850px;
+        margin: 0 auto;
+        background: #232e43;
+        border-radius: 16px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #4a5568;
+      }
+
+      .resume-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #4299e1, #63b3ed, #90cdf4, #bee3f8);
+      }
+
+      .header {
+        background: #1a202c;
+        color: white;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        border-bottom: 1px solid #4a5568;
+      }
+
+      .profile-img {
+        width: 80px;
+        height: 80px;
+        background: #4a5568;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        font-weight: bold;
+        color: #e2e8f0;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        border: 2px solid #63b3ed;
+      }
+
+      .name {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-info {
+        font-size: 1rem;
+        opacity: 0.95;
+        line-height: 1.4;
+      }
+
+      .contact-info a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+        transition: all 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        border-bottom-color: white;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .summary {
+        background: #e2e8f0;
+        padding: 30px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+        border-left: 6px solid #40509e;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #a2d2ff;
+        margin-bottom: 25px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e2e8f0;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+      }
+
+      .experience-item,
+      .education-item {
+        margin-bottom: 30px;
+        padding: 25px;
+        background: #fafafa;
+        border-radius: 12px;
+        border-left: 6px solid #40509e;
+        transition: all 0.3s ease;
+      }
+
+      .experience-item:hover,
+      .education-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .date-range {
+        font-weight: 600;
+        color: #25357c;
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+
+      .position {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #121824;
+        margin-bottom: 5px;
+      }
+
+      .company {
+        color: #4a5568;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+
+      .responsibilities {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .responsibilities li {
+        margin-bottom: 12px;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .responsibilities li::before {
+        content: "▸";
+        color: #1d2c6e;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      .projects-grid {
+        display: grid;
+        gap: 25px;
+      }
+
+      .project-item {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .project-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+        border-color: #667eea;
+      }
+
+      .project-title {
+        font-weight: 600;
+        color: #1a202c;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+
+      .project-description {
+        line-height: 1.6;
+        color: #4a5568;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .skill-tag {
+        background: linear-gradient(135deg, #506dec, #4b7fa2);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .skill-tag:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .resume-container {
+          margin: 10px;
+        }
+
+        .header {
+          padding: 30px 20px;
+        }
+
+        .name {
+          font-size: 2rem;
+        }
+
+        .content {
+          padding: 30px 20px;
+        }
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+
+        .resume-container {
+          box-shadow: none;
+          border-radius: 0;
+        }
+
+        .header {
+          background: #667eea !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-container">
+      <div class="header">
+        <div
+          class="profile-img"
+          style="
+            background-image: url('https://media.licdn.com/dms/image/v2/D5603AQGBaZLtMkQryw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732549692435?e=1758153600&v=beta&t=dRfQx539luG3j2CQM5AbbgOHhvufWYEHluaA9woG5N8');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <h1 class="name">Mary Angeline Samson</h1>
+        <div class="contact-info">
+          09959654127 • m.angelinesamson@gmail.com •
+          <a href="https://www.linkedin.com/in/mary-angeline-samson-15728b210/"
+            >LinkedIn Profile</a
+          >
+          •
+          <a href="https://samson-portfolio-seven.vercel.app/"
+            >Portfolio Website</a
+          >
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="summary">
+          Computer Engineering student specializing in low-code web application
+          development at Mapua University. Currently developing full-stack
+          development skills through two React-based personal projects and
+          gaining hands-on experience as a Software Engineering Intern at
+          Manulife IT Delivery Center for 9 months. During my internship, I've
+          been working on document processing workflows using Azure AI
+          integration, learning CI/CD pipeline management, and contributing to
+          API development with Express.js and SOAP protocols.
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Professional Experience</h2>
+
+          <div class="experience-item">
+            <div class="date-range">2022 – 2023</div>
+            <div class="position">Technical Committee Head</div>
+            <div class="company">Mapúa-ICpEP.SE | Manila, Philippines</div>
+            <ul class="responsibilities">
+              <li>
+                Led the Technical Committee of Mapúa-ICpEP.SE, managing
+                cross-functional teams to deliver technical solutions for
+                organizational projects and events. Applied strong leadership
+                and project management skills to ensure seamless execution of
+                technical initiatives, resulting in improved operational
+                efficiency.
+              </li>
+              <li>
+                Contributed to the development of Figma plugin 'Composer', an
+                automated certificate generation system, reducing manual
+                processing time.
+              </li>
+              <li>
+                Created comprehensive technical documentation and integrated
+                automated email distribution using Google Sheets scripting,
+                enhancing workflow efficiency.
+              </li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="date-range">September 2024 – MAY 2025</div>
+            <div class="position">Software Engineering Intern</div>
+            <div class="company">
+              Manulife IT Delivery Center Asia Inc.| Makati, Philippines
+            </div>
+            <ul class="responsibilities">
+              <li>
+                Completed comprehensive full-stack developer bootcamp during
+                internship, gaining proficiency in MERN stack, REST APIs, Apollo
+                GraphQL, unit testing frameworks, and Agile/SCRUM methodologies.
+              </li>
+              <li>
+                Developed 'Index 2.0', a Python-based Azure Function application
+                that leverages Azure AI's optical character recognition to
+                automate health insurance form processing. Project forecasts
+                significant business impact with potential 10% cost reduction
+                and 5% increase in document processing capacity.
+              </li>
+              <li>
+                Transitioned to Group Benefits team as Backend Engineer Intern,
+                contributing to API integration of SOAP functions for the Group
+                Benefits management website. Maintained code quality through
+                thorough peer reviews, comprehensive unit testing, and detailed
+                progress reporting in daily stand-ups.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-container">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">REACT</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">Azure Functions</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <div class="project-item">
+              <div class="project-title">SKIDD App</div>
+              <div class="project-description">
+                A comprehensive skin disease classification application
+                leveraging multiple trained image classification models
+                including ResNet, CNN, and YOLOv7 for accurate diagnosis. Built
+                with a React frontend and hybrid backend architecture using
+                Node.js and FastAPI to optimize both web framework capabilities
+                and machine learning model deployment.
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-title">
+                Physiotherapy Exercise Recognition for Scoliosis Patients with
+                Raspberry Pi-Based Computer Vision
+              </div>
+              <div class="project-description">
+                Completed thesis research developing a two-stream CNN model for
+                real-time analysis of physiotherapy exercises on edge computing
+                hardware. The system enables portable, automated exercise
+                monitoring for scoliosis treatment compliance. Research findings
+                were presented at ICISPC 2025 (International Conference on
+                Imaging, Signal Processing, and Communications).
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-title">Index 2.0</div>
+              <div class="project-description">
+                Python-based Azure Function application that integrates GPT-4
+                with Azure's Optical Character Recognition to automatically
+                parse and structure health insurance forms into organized JSON
+                format. Implemented with Jenkins CI/CD pipeline for automated
+                testing and deployment, streamlining document processing
+                workflows for insurance operations.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Education</h2>
+          <div class="education-item">
+            <div class="date-range">NOV 2020 – FEB 2026</div>
+            <div class="position">
+              Bachelor of Science in Computer Engineering
+            </div>
+            <div class="company">Mapúa University | Intramuros, Manila</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
