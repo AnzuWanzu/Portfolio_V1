@@ -1,6 +1,6 @@
 #projects {
   height: auto;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
   padding: 2rem;
   background: #121824;
   text-align: center;
@@ -26,20 +26,19 @@
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 2rem); /* Adjusted width for better responsiveness */
+  width: calc(50% - 2rem);
   max-width: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, margin 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #projects .project-card:hover,
 #projects .project-card:focus {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px rgba(74, 120, 141, 0.5);
-  margin: 1.5rem;
 }
 
 #projects .project-image {
@@ -84,10 +83,9 @@
 }
 
 #projects .tag svg {
-  font-size: 24px; /* Increased the size of the icons */
+  font-size: 24px;
 }
 
-/* Specific colors for each tag */
 .tag.figma {
   background: #30251d;
 }
@@ -114,29 +112,24 @@
 
 @media (max-width: 768px) {
   #projects {
-    padding: 1rem; /* Adjusted padding for smaller screens */
+    padding: 1rem;
   }
 
   #projects .projects-grid {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    gap: 1.5rem; /* Increased gap between stacked items */
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   #projects .project-card {
-    width: calc(100% - 2rem); /* Full width for each card on smaller screens */
-    max-width: none; /* No maximum width on smaller screens */
-  }
-  
-  #projects .project-card:hover,
-  #projects .project-card:focus {
-    margin: 1rem; /* Adjusted margin on hover/focus for smaller screens */
+    width: calc(100% - 2rem);
+    max-width: none;
   }
 }
 
 @media only screen and (max-width: 480px) {
   #projects h2 {
-    font-size: 1.8rem; 
-    padding: 1rem 0 0.5rem; /* Adjust padding for smallest screens */
-    margin-bottom: 1rem; /* Adjust margin for smallest screens */
+    font-size: 1.8rem;
+    padding: 1rem 0 0.5rem;
+    margin-bottom: 1rem;
   }
 }
